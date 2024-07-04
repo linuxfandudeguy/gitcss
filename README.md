@@ -10,7 +10,7 @@ GitCSS is a lightweight CSS framework designed for easy integration and customiz
 To use GitCSS, include the following link in your HTML `<head>` section:
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linuxfandudeguy/gitcss@firstver/test.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/linuxfandudeguy/gitcss@firstver/git.css">
 ```
 
 Replace `firstver` with the specific release tag or version you want to use.
