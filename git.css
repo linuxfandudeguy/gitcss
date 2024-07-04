@@ -1,0 +1,220 @@
+/*
+ * GitCSS - CSS framework for stylish web designs.
+ * 
+ * Author: linuxfandudeguy
+ * Repository: [Link to your GitHub repository]
+ * 
+ * This stylesheet includes custom styles for various elements,
+ * emphasizing customization and ease of integration.
+ * 
+ * Feel free to modify and use these styles in your projects.
+ * For updates and contributions, visit the GitHub repository.
+ */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+/* Root Variables for Customization */
+:root {
+  --color-primary: #3490dc; /* Default color */
+  --color-secondary: #ffed4a;
+  --color-accent: #e3342f;
+
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Lora', serif;
+
+  --hue-primary: 210; /* Default hue for primary color */
+  --hue-secondary: 60;
+  --hue-accent: 10;
+}
+
+/* Apply Default Fonts Globally */
+body {
+  font-family: var(--font-primary), var(--font-secondary), sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Default Container Styles */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 0.5rem; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow */
+}
+
+/* Utility Classes for Hue Adjustment */
+.hue-primary-50 { --hue-primary: 50; }
+.hue-primary-100 { --hue-primary: 100; }
+.hue-primary-150 { --hue-primary: 150; }
+.hue-primary-200 { --hue-primary: 200; }
+.hue-primary-250 { --hue-primary: 250; }
+.hue-primary-300 { --hue-primary: 300; }
+.hue-primary-350 { --hue-primary: 350; }
+
+/* Customizable Color Classes */
+.bg-primary { background-color: hsl(var(--hue-primary), 60%, 50%); }
+.text-primary { color: hsl(var(--hue-primary), 60%, 50%); }
+.border-primary { border-color: hsl(var(--hue-primary), 60%, 50%); }
+
+.bg-secondary { background-color: hsl(var(--hue-secondary), 60%, 50%); }
+.text-secondary { color: hsl(var(--hue-secondary), 60%, 50%); }
+.border-secondary { border-color: hsl(var(--hue-secondary), 60%, 50%); }
+
+.bg-accent { background-color: hsl(var(--hue-accent), 60%, 50%); }
+.text-accent { color: hsl(var(--hue-accent), 60%, 50%); }
+.border-accent { border-color: hsl(var(--hue-accent), 60%, 50%); }
+
+/* Gradient Classes */
+.bg-gradient-primary {
+  background: linear-gradient(90deg, hsl(var(--hue-primary), 60%, 50%), hsl(var(--hue-secondary), 60%, 50%));
+}
+
+.bg-gradient-secondary {
+  background: radial-gradient(circle, hsl(var(--hue-secondary), 60%, 50%), hsl(var(--hue-accent), 60%, 50%));
+}
+
+.text-gradient-primary {
+  background: linear-gradient(90deg, hsl(var(--hue-primary), 60%, 50%), hsl(var(--hue-secondary), 60%, 50%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-gradient-primary {
+  border-image: linear-gradient(90deg, hsl(var(--hue-primary), 60%, 50%), hsl(var(--hue-secondary), 60%, 50%)) 1;
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 0.375rem; /* Larger rounded corners */
+  border: none; /* Remove outline */
+  transition: background 0.3s, border 0.3s, color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 1px 2px rgba(0, 0, 0, 0.06);
+}
+
+.btn-primary {
+  background-color: hsl(var(--hue-primary), 60%, 50%);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: hsl(var(--hue-primary), 70%, 40%);
+}
+
+.btn-secondary {
+  background-color: hsl(var(--hue-secondary), 60%, 50%);
+  color: black;
+}
+
+.btn-secondary:hover {
+  background-color: hsl(var(--hue-secondary), 70%, 40%);
+}
+
+.btn-accent {
+  background-color: hsl(var(--hue-accent), 60%, 50%);
+  color: white;
+}
+
+.btn-accent:hover {
+  background-color: hsl(var(--hue-accent), 70%, 40%);
+}
+
+.btn-gradient-primary {
+  background: linear-gradient(90deg, hsl(var(--hue-primary), 60%, 50%), hsl(var(--hue-secondary), 60%, 50%));
+  color: white;
+}
+
+.btn-gradient-primary:hover {
+  background: linear-gradient(90deg, hsl(var(--hue-primary), 70%, 40%), hsl(var(--hue-secondary), 70%, 40%));
+}
+
+.btn-gradient-secondary {
+  background: radial-gradient(circle, hsl(var(--hue-secondary), 60%, 50%), hsl(var(--hue-accent), 60%, 50%));
+  color: black;
+}
+
+.btn-gradient-secondary:hover {
+  background: radial-gradient(circle, hsl(var(--hue-secondary), 70%, 40%), hsl(var(--hue-accent), 70%, 40%));
+}
+
+.btn-font-primary {
+  font-family: var(--font-primary);
+}
+
+.btn-font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* Font Family Classes */
+.font-primary {
+  font-family: var(--font-primary);
+}
+
+.font-secondary {
+  font-family: var(--font-secondary);
+}
+
+/* Font Weight Classes */
+.font-weight-400 {
+  font-weight: 400;
+}
+
+.font-weight-500 {
+  font-weight: 500;
+}
+
+.font-weight-700 {
+  font-weight: 700;
+}
+
+/* Font Style Classes */
+.font-italic {
+  font-style: italic;
+}
+
+.font-normal {
+  font-style: normal;
+}
+
+/* Example Utility Classes */
+.p-4 {
+  padding: 1rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.border-2 {
+  border-width: 2px;
+}
+
+.text-white {
+  color: white;
+}
+
+/* Rainbow Button */
+.btn-rainbow {
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  color: white;
+}
+
+.btn-rainbow:hover {
+  background: linear-gradient(to right, violet, indigo, blue, green, yellow, orange, red);
+  /* Adjust text color for contrast */
+  color: black;
+}
+
+/* Container Styles */
+.container {
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Increased shadow for container */
+}
